@@ -337,6 +337,16 @@ require('lazy').setup({
     -- instead of just disabling it here, to keep your config clean.
     enabled = true,
     event = 'VimEnter',
+    opts = {
+      defaults = {
+        vimgrep_arguments = {
+          "rg",
+          "--vimgrep",
+          "--hidden",
+          "--follow",
+        },
+      },
+    },
     dependencies = {
       'nvim-lua/plenary.nvim',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
